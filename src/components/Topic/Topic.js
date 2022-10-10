@@ -11,7 +11,7 @@ const Topic = ({topic}) => {
             <p>Total Questions: {total}</p>
             <Link to={`/${id}`}>
                 <button className='flex items-center gap-x-1 bg-pink-700 text-pink-50 px-4 py-1 rounded-md hover:bg-sky-700 leading-6'>
-                    <span>Start Quiz</span>
+                    <span>Start Quizes</span>
                     <ArrowRightIcon className='w-4'></ArrowRightIcon>
                 </button>
             </Link>
