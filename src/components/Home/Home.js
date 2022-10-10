@@ -6,8 +6,8 @@ import {ArrowRightIcon} from '@heroicons/react/24/outline';
 
 const Home = () => {
     return (
-        <div className='grid grid-cols-2 items-center'>
-            <div className='ml-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
+            <div className='m-6 lg:ml-10 order-2 lg:order-1'>
                 <h2 className='text-3xl font-bold'>
                     <span className='text-pink-700'>Welcome To MCQ Exam</span>
                 </h2>
@@ -21,8 +21,8 @@ const Home = () => {
                     </button>
                 </Link>
             </div>
-            <div>
-                <img src={header} alt="header_image" />
+            <div className='order-1 lg:order-2'>
+                <img src={header} alt="header_image" className='w-full' />
             </div>
         </div>
     );
