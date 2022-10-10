@@ -5,7 +5,7 @@ import {ChartPieIcon, HomeIcon, QuestionMarkCircleIcon, UserGroupIcon} from '@he
 
 const Navbar = () => {
     return (
-        <div className='bg-pink-500 text-pink-50 py-2'>
+        <div className='bg-pink-700 text-pink-50 py-2'>
             <div className='w-4/5 mx-auto flex justify-center lg:justify-between items-center'>
 
                 {/* Site Logo for both desktop and mobile */}
