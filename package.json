@@ -1,5 +1,6 @@
 {
   "name": "mcq-exam",
+  "author": "Shamim Sarker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
