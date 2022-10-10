@@ -1,10 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLoaderData} from 'react-router-dom';
 import header from '../../image/header.png';
 import {ArrowRightIcon} from '@heroicons/react/24/outline';
+import Topic from '../Topic/Topic';
 
 
 const Home = () => {
+    const topics = useLoaderData().data;
+    console.log(topics);
     return (
         <div>
             {/* Header section */}
@@ -28,9 +31,14 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Category section */}
-            <div>
-
+            {/* Topic section */}
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-y-4 lg:gap-x-4 m-5'>
+                {
+                    topics.map(topic => <Topic
+                        key={topic.id}
+                        topic={topic}
+                    ></Topic>)
+                }
             </div>
         </div>
     );
