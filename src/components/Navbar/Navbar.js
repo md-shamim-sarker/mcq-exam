@@ -18,19 +18,19 @@ const Navbar = () => {
 
                 {/* For Desktop Device */}
                 <div className='hidden lg:flex gap-x-5'>
-                    <Link className='flex gap-x-1 hover:underline underline-offset-8' to={"/"}>
+                    <Link className='flex gap-x-1 hover:underline underline-offset-8 focus:text-blue-300' to={"/"}>
                         <HomeIcon className='w-5'></HomeIcon>
                         <span>Home</span>
                     </Link>
-                    <Link className='flex gap-x-1 hover:underline underline-offset-8' to={"/statistics"}>
+                    <Link className='flex gap-x-1 hover:underline underline-offset-8 focus:text-blue-300' to={"/statistics"}>
                         <ChartPieIcon className='w-5'></ChartPieIcon>
                         <span>Statistics</span>
                     </Link>
-                    <Link className='flex gap-x-1 hover:underline underline-offset-8' to={"/blog"}>
+                    <Link className='flex gap-x-1 hover:underline underline-offset-8 focus:text-blue-300' to={"/blog"}>
                         <QuestionMarkCircleIcon className='w-5'></QuestionMarkCircleIcon>
                         <span>Blog</span>
                     </Link>
-                    <Link className='flex gap-x-1 hover:underline underline-offset-8' to={"/about"}>
+                    <Link className='flex gap-x-1 hover:underline underline-offset-8 focus:text-blue-300' to={"/about"}>
                         <UserGroupIcon className='w-5'></UserGroupIcon>
                         <span>About</span>
                     </Link>
