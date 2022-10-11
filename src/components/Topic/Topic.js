@@ -6,7 +6,7 @@ const Topic = ({topic}) => {
     const {id, logo, name, total} = topic;
     return (
         <div className='bg-pink-300 p-5 leading-10 rounded-md'>
-            <img src={logo} alt="topic_img" className='w-full bg-[#423901] rounded-md mb-2' />
+            <img src={logo} alt="topic_img" className='w-full bg-pink-500 rounded-md mb-2' />
             <h2 className='text-2xl font-bold'>Topic: {name}</h2>
             <p>Total Questions: {total}</p>
             <Link to={`/${id}`}>
