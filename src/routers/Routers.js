@@ -20,6 +20,11 @@ const Routers = () => {
                     element: <Home></Home>
                 },
                 {
+                    path: "/home",
+                    loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+                    element: <Home></Home>
+                },
+                {
                     path: "/:id",
                     loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
                     element: <Quizes></Quizes>

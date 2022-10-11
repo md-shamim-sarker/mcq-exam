@@ -17,7 +17,7 @@ const Home = () => {
                     <p className='my-5'>
                         <span className='text-sky-800'>Research shows that testing ourself with MCQ Exam is more effective than rereading our notes. From math to medicine to modern languages, MCQ Exam App is used by students in over 100 different subjects.</span>
                     </p>
-                    <Link to={'#topic'}>
+                    <Link to={'/home'}>
                         <button className='flex items-center gap-x-1 bg-pink-700 text-pink-50 px-4 py-1 rounded-md hover:bg-sky-700 focus:bg-sky-700'>
                             <span>Let's Start </span>
                             <ArrowRightIcon className='w-4'></ArrowRightIcon>

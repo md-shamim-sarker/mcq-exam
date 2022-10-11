@@ -4,7 +4,7 @@ import {LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContain
 
 const Statistics = () => {
     const quizes = useLoaderData().data;
-    console.log(quizes);
+    // console.log(quizes);
     return (
         <div className='w-full flex justify-center flex-col items-center mt-5'>
             <div className='text-center my-3'>
@@ -28,7 +28,9 @@ const Statistics = () => {
                 <div className='w-full'>
                     {
                         quizes.map(quiz => <ul>
-                            <li className='flex justify-between gap-x-24 px-7 border border-slate-700'>
+                            <li className='flex justify-between gap-x-24 px-7 border border-slate-700'
+                                key={quizes.indexOf(quiz)}
+                            >
                                 <div>{quiz.name}</div>
                                 <div>{quiz.total}</div>
                             </li>
