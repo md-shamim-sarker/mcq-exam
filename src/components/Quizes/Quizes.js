@@ -85,6 +85,7 @@ const Quizes = () => {
                     quizes.map(quiz => <Quiz
                         key={quiz.id}
                         quiz={quiz}
+                        serial={quizes.indexOf(quiz)}
                         correctAnswerHandler={correctAnswerHandler}
                         userAnswerHandler={userAnswerHandler}
                         showCorrectAnswer={showCorrectAnswer}
