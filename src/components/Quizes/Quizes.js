@@ -51,7 +51,7 @@ const Quizes = () => {
             {/* Quiz Information */}
             <div className='flex flex-col justify-center items-center'>
                 <div>
-                    <img src={logo} alt="logo_image" className='w-40 bg-orange-700' />
+                    <img src={logo} alt="logo_image" className='w-40 bg-pink-700 rounded-full' />
                 </div>
                 <div className='text-center'>
                     <h2 className='text-2xl font-bold'>The topic of quiz: {name}</h2>
@@ -61,12 +61,22 @@ const Quizes = () => {
             </div>
             <hr className='w-11/12 lg:w-3/5 mx-auto bg-pink-700 h-1 my-3' />
 
-            {/* Result Card */}
-            <div className='fixed right-0 top-1/3 bg-pink-700 text-pink-50 p-5 mr-3 rounded-md'>
+            {/* Result Card for PC*/}
+            <div className='hidden lg:block fixed right-0 top-1/3 bg-pink-700 text-pink-50 p-5 mr-3 rounded-md'>
                 <h2 className='text-2xl font-bold'>Total Result</h2>
                 <hr />
                 <h2>Correct Answer: {correctCount}</h2>
                 <h2>Wrong Answer: {wrongCount}</h2>
+            </div>
+
+            {/* Result Card for mobile */}
+            <div className='block lg:hidden bg-pink-700 text-pink-50 p-3 mx-3 rounded-md sticky top-1'>
+                <h2 className='text-xl font-bold text-center my-1'>Total Result</h2>
+                <hr />
+                <div className='flex justify-between'>
+                    <h2>Correct Answer: {correctCount}</h2> |
+                    <h2>Wrong Answer: {wrongCount}</h2>
+                </div>
             </div>
 
             {/* Quizes */}
