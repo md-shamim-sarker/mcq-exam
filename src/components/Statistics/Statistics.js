@@ -1,10 +1,11 @@
 import React from 'react';
 import {useLoaderData} from 'react-router-dom';
 import {LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
+import Dataset from '../Dataset/Dataset';
 
 const Statistics = () => {
     const quizes = useLoaderData().data;
-    // console.log(quizes);
+    console.log(quizes);
     return (
         <div className='w-full flex justify-center flex-col items-center mt-5'>
             <div className='text-center my-3'>
@@ -26,16 +27,19 @@ const Statistics = () => {
             <div className='my-10'>
                 <h2 className='text-center text-2xl font-bold my-5'>Data Set</h2>
                 <div className='w-full'>
+                    <div className='w-11/12 mx-auto grid grid-cols-3 gap-x-5 lg:gap-x-36 border border-collapse px-10 border-gray-700 font-bold'>
+                        <div>Serial</div>
+                        <div>Topic</div>
+                        <div>Questions</div>
+                    </div>
+
                     {
-                        quizes.map(quiz => <ul>
-                            <li className='flex justify-between gap-x-24 px-7 border border-slate-700'
-                                key={quizes.indexOf(quiz)}
-                            >
-                                <div>{quiz.name}</div>
-                                <div>{quiz.total}</div>
-                            </li>
-                        </ul>)
+                        quizes.map(quiz => <Dataset
+                            key={quiz.id}
+                            quiz={quiz}
+                        ></Dataset>)
                     }
+
                 </div>
             </div>
         </div>

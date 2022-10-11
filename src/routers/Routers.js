@@ -17,36 +17,33 @@ const Routers = () => {
                 {
                     path: "/",
                     loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
-                    element: <Home></Home>
+                    element: <Home></Home>,
                 },
                 {
                     path: "/home",
                     loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
-                    element: <Home></Home>
+                    element: <Home></Home>,
                 },
                 {
                     path: "/:id",
                     loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
-                    element: <Quizes></Quizes>
+                    element: <Quizes></Quizes>,
                 },
                 {
                     path: "/statistics",
                     loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
-                    element: <Statistics></Statistics>
+                    element: <Statistics></Statistics>,
                 },
                 {
                     path: "/blog",
-                    element: <Blog></Blog>
+                    element: <Blog></Blog>,
                 },
                 {
                     path: "/about",
-                    element: <About></About>
+                    element: <About></About>,
                 }
-            ]
-        },
-        {
-            path: "/*",
-            element: <ErrorPage></ErrorPage>
+            ],
+            errorElement: <ErrorPage></ErrorPage>
         }
     ]);
     return (
