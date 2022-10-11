@@ -4,7 +4,6 @@ import header from '../../image/header.png';
 import {ArrowRightIcon} from '@heroicons/react/24/outline';
 import Topic from '../Topic/Topic';
 
-
 const Home = () => {
     const topics = useLoaderData().data;
     return (

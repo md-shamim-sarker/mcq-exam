@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useLoaderData} from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 
 const Quizes = () => {
+    const [correctAnswer, setCorrectAnswer] = useState("");
+    const [userAnswer, setUserAnswer] = useState("");
+
+    const quizes = useLoaderData().data.questions;
     const quizInfo = useLoaderData().data;
     const {logo, name, total} = quizInfo;
-    const quizes = quizInfo.questions;
+
+    const correctAnswerHandler = (quizes) => {
+        setCorrectAnswer(quizes.correctAnswer);
+    };
+
+    const userAnswerHandler = (event) => {
+        setUserAnswer(event.target.innerText);
+    };
+
+    useEffect(() => {
+        if(correctAnswer === userAnswer) {
+            console.log('Correct!');
+        } else {
+            console.log('Wrong!');
+        }
+    }, [correctAnswer, userAnswer]);
+
     return (
         <div className='my-7'>
             {/* Quiz Information */}
@@ -27,6 +47,8 @@ const Quizes = () => {
                     quizes.map(quiz => <Quiz
                         key={quiz.id}
                         quiz={quiz}
+                        correctAnswerHandler={correctAnswerHandler}
+                        userAnswerHandler={userAnswerHandler}
                     ></Quiz>)
                 }
             </div>
