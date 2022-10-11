@@ -1,6 +1,6 @@
 import React from 'react';
 import Option from '../Option/Option';
-import {EyeIcon} from '@heroicons/react/24/outline';
+import {EyeIcon} from '@heroicons/react/24/solid';
 
 
 const Quiz = ({quiz, correctAnswerHandler, userAnswerHandler, showCorrectAnswer}) => {
@@ -13,7 +13,7 @@ const Quiz = ({quiz, correctAnswerHandler, userAnswerHandler, showCorrectAnswer}
                     <span className='font-bold'>Question:</span> {question}
                 </div>
                 <div onClick={() => showCorrectAnswer(quiz.correctAnswer)} title='Show Answer'>
-                    <EyeIcon className='w-6 hover:text-pink-600 cursor-pointer'></EyeIcon>
+                    <EyeIcon className='w-6 text-pink-700 hover:text-blue-600 cursor-pointer'></EyeIcon>
                 </div>
             </div>
             <div onClick={() => correctAnswerHandler(quiz)} className='grid grid-cols-1 lg:grid-cols-2 gap-2 border bg-pink-200 p-3 rounded-3xl'>

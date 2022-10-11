@@ -15,7 +15,7 @@ const Home = () => {
                         <span className='text-pink-700'>Welcome To MCQ Exam</span>
                     </h2>
                     <p className='my-5'>
-                        <span className='text-sky-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, molestias! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt nihil temporibus voluptatem nam aspernatur nulla perferendis, veniam neque minima repellat eaque modi aliquam saepe inventore.</span>
+                        <span className='text-sky-800'>Research shows that testing ourself with MCQ Exam is more effective than rereading our notes. From math to medicine to modern languages, MCQ Exam App is used by students in over 100 different subjects.</span>
                     </p>
                     <Link to={'#topic'}>
                         <button className='flex items-center gap-x-1 bg-pink-700 text-pink-50 px-4 py-1 rounded-md hover:bg-sky-700 focus:bg-sky-700'>
