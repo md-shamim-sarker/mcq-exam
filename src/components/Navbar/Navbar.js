@@ -42,7 +42,7 @@ const Navbar = () => {
                 </div>
 
                 {/* For Mobile Device */}
-                <div className='w-screen flex justify-around lg:hidden fixed bottom-0 bg-pink-500 py-1'>
+                <div className='w-screen flex justify-around lg:hidden fixed bottom-0 bg-pink-600 py-1'>
                     <NavLink style={activeStyles} className='flex flex-col justify-center items-center' to={"/home"}>
                         <HomeIcon className='w-7'></HomeIcon>
                         <span>Home</span>

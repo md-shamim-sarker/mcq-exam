@@ -30,7 +30,7 @@ const Home = () => {
             </div>
 
             {/* Topic section */}
-            <div id='topic' className='grid grid-cols-1 lg:grid-cols-4 gap-y-4 lg:gap-x-5 m-5 mb-16'>
+            <div id='topic' className='grid grid-cols-1 lg:grid-cols-4 gap-y-5 lg:gap-x-5 m-5 mb-16'>
                 {
                     topics.map(topic => <Topic
                         key={topic.id}
